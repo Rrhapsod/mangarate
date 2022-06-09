@@ -19,7 +19,7 @@ const Cadastro: NextPage = () => {
   return (
     <>
       <Title
-        titulo={"Cadastro de Mangás para Adoção"}
+        titulo={"Cadastro de Mangás para Avaliação"}
         subtitulo={"Preencha os dados do novo Mangá"}
       />
 
