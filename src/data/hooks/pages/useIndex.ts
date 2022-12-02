@@ -10,11 +10,14 @@ export function useIndex() {
     [nota, setNota] = useState(""),
     [mensagem, setMensagem] = useState("");
 
+  const getMangas = async () => {
+    const resposta = await ApiService.get("/mangas");
+    setListaMangas(resposta.data);
+  };
+
   useEffect(() => {
-    ApiService.get("/mangas").then((resposta) => {
-      setListaMangas(resposta.data);
-    });
-  });
+    getMangas();
+  }, []);
 
   function adotar() {
     if (mangaSelecionado !== null) {
